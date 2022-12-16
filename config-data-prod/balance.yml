@@ -10,7 +10,7 @@ spring:
       server:
         git:
           default-label: master
-          uri: https://github.com/banking-nttdata-bootcamp/balance
+          uri: https://github.com/BootcampBanking/balance
   application:
     name: balance
 
