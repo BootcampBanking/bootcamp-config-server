@@ -10,9 +10,9 @@ spring:
       server:
         git:
           default-label: master
-          uri: https://github.com/BootcampBanking/boot-coin
+          uri: https://github.com/BootcampBanking/bootcoin
   application:
-    name: boot-coin
+    name: bootcoin
 
 eureka:
   client:
