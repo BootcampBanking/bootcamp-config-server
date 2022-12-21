@@ -90,12 +90,25 @@ spring:
             - Path=/virtual-coin/**
           filters:
             - RewritePath=/virtual-coin(?<path>.*), /$\{path}
+        - id: boot-coin
+          uri: lb://boot-coin
+          predicates:
+            - Path=/boot-coin/**
+          filters:
+            - RewritePath=/boot-coin(?<path>.*), /$\{path}
+        - id: requestboot-coin
+          uri: lb://requestboot-coin
+          predicates:
+            - Path=/requestboot-coin/**
+          filters:
+            - RewritePath=/requestboot-coin(?<path>.*), /$\{path}
         - id: openapi
           uri: http://localhost:${server.port}
           predicates:
             - Path=/v3/api-docs/**
           filters:
             - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+
         #routes[0]:
         #id: bootcamp-customer
         #predicates: Path=/customer/**
@@ -142,3 +155,7 @@ springdoc:
         url: /debit-card/api-docs/
       - name: virtual-coin
         url: /virtual-coin/api-docs/
+      - name: boot-coin
+        url: /boot-coin/api-docs/
+      - name: requestboot-coin
+        url: /requestboot-coin/api-docs/
