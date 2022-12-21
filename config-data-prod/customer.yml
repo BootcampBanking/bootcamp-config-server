@@ -10,7 +10,7 @@ spring:
       server:
         git:
           default-label: master
-          uri: https://github.com/banking-nttdata-bootcamp/customer
+          uri: https://github.com/BootcampBanking/customer
   application:
     name: customer
 
@@ -21,7 +21,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: https://bnttdata-eureka-server.azurewebsites.net/eureka
+      defaultZone: https://nttdata-eureka-server.azurewebsites.net/eureka
     prefer-ip-address: true
 
 springdoc:
